@@ -95,6 +95,10 @@ This example shows the simplest scenario covered by the **Cross Architecture**, 
 
 ![Cross Architecture - Implementing HW Device Based SW](Alessandro Meo Cross Architecture - Implementing HW Device Based SW.png)
 
+This example comes from one of the applications I've been working on during the last few years, which is a SW acquiring images from a custom HW device and elaborating them by means of some algorithms. The application was designed as a loosely coupled multi-layer software and, in particular, several layers were needed to abstract from the custom HW.
+
+Reconsidering that architecture in order to fit into the **Cross Architecture** led to the schema above, where the *Infrastructure* has been split into several SW blocks for interacting with the database, on one hand, and with the custom HW, on the other hand. Also, the presence of multiple loosely coupled layers for interacting with the custom HW (the "device manager" and the "device driver" blocks) perfectly fits into the **Cross Architecture** philosophy.
+
 ### Micro-Services
 
 ![Cross Architecture - Implementing Micro-Services](Alessandro Meo Cross Architecture - Implementing Micro-Services.png)
