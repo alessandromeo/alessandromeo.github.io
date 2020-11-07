@@ -1,6 +1,6 @@
 ## About Me
 
-Ok... I'm probably supposed to tell you something about me in this section. :smile:
+Ok... I'm probably supposed to tell you something about me in this section.
 
 For now, just let me say that my name is **Alessandro Meo** and I'm a SW developer, passionate about SW architecture and good coding; however, when I find time to do it, I'll write some more!
 
