@@ -89,7 +89,7 @@ In the example above, the *Application Interface* is implemented by a web API ap
 
 ![Cross Architecture - Implementing Simple In-Memory](Alessandro Meo Cross Architecture - Implementing Simple In-Memory.png)
 
-This example shows the simplest scenario covered by the **Cross Architecture**, where the *Application Interface* exposes an in-memory working logic, only condensed into the *Core Model*.
+This example shows the simplest scenario covered by the **Cross Architecture**, where the *Application Interface* exposes an in-memory working logic, condensed into the *Core Model*.
 
 ### SW Built Around a HW Device
 
