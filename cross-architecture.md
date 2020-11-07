@@ -81,6 +81,10 @@ With respect to the "classical" multi-layer approach, the **Cross Architecture**
 
 ![Cross Architecture - Implementing Simple CRUD](Alessandro Meo Cross Architecture - Implementing Simple CRUD.png)
 
+A simple CRUD application does not have a properly defined business logic, so it may be implemented removing the *Application Services*, which are defined as an optional box by the **Cross Architecture**; the resulting design is very dry and makes use of the optional reference between the *Application Interface* and the *Infrastructure*.
+
+In the example above, the *Application Interface* is implemented by a web API application, eventually called by a S.P.A.; this is only to stress that, in the **Cross Architecture** the application interface is not necessarily dedicated to human users; moreover, the calling the S.P.A. was included in the schema only as an example, but it is not covered by the **Cross Architecture**.
+
 ### Simple In-Memory
 
 ![Cross Architecture - Implementing Simple In-Memory](Alessandro Meo Cross Architecture - Implementing Simple In-Memory.png)
