@@ -1,7 +1,7 @@
 # Cross Architecture
 _**Alessandro Meo** - Nov. 7, 2020_
 
-The **Cross Architecture** is a SW architecure approach inspired by the combination of some well known architecures and design techniques, like the *multi-layer architecture*, the *Onion Architecture*, the *Clean Architecture* and the *DDD*.
+The **Cross Architecture** is a SW architecture approach inspired by the combination of some well-known architectures and design techniques, like the *multi-layer architecture*, the *Onion Architecture*, the *Clean Architecture* and the *DDD*.
 
 The main idea that led me to the definition of the **Cross Architecture** was to describe a flexible way for designing the architecture of a SW over the actual application needs, while respecting a set of basic constraints providing good decoupling, testability and logical organization of code. Also, the same set of rules should provide a guidance for extending the architecture in order to follow potential application evolutions.
 
@@ -25,7 +25,7 @@ The dependency between the *Application Interface* and the *Infrastructure Inter
 
 The schema described in the previous section only deals with loosely coupled SW block sets implementing the application features, but, in order to complete the actual SW, the composition root code should be added.
 
-For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is splitted into several blocks (the ones holding the "U" and "I" letters), chained together in a nested reference tree called *Composition Chain*.
+For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks (the ones holding the "U" and "I" letters), chained together in a nested reference tree called *Composition Chain*.
 
 ![Cross Architecture - Composition Chain](Alessandro Meo Cross Architecture - Composition Chain.png)
 
