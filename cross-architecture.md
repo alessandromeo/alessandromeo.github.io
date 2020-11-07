@@ -13,19 +13,29 @@ The **Cross Architecture** can be represented by the following cross-shaped sche
 
 ![Cross Architecture - Schema](Alessandro Meo Cross Architecture - Schema.png)
 
-Each box represents one or more SW blocks tied to the described logical area (e.g.: the Infrastructure may be composed of a DB access block and a mail send block).
+In the schema, each box represents a logical area that may be implemented by one or more SW blocks (either unrelated or organized in layers) or even by no SW block in case the box is marked as optional (gray background).
 
-Each dependency displayed is a compile time dependency; also, its use is explicitly expressed:
-* a “uses” dependency means that the dependent block uses the pointed one, moreover, in case the pointed block is and interface block, one of its implementations is required to the dependent block as an injection (more precisely, this is about the contained classes);
-* the “implements” dependency means that the dependent block implements the pointed one (more precisely, this is about the contained classes).
+The compile time dependencies between the SW blocks are explicitly expressed, along with their intended use, by means of arrows among the holding boxes:
+* a *“uses” dependency* means that the dependent block uses the pointed one, moreover, in case the pointed block is and interface block, one of its implementations is required to be injected into the dependent block (more precisely, this is about the contained classes);
+* an *“implements” dependency* means that the dependent block implements the pointed one (more precisely, this is about the contained classes).
 
-Some blocks and dependencies are optional.
+The dependency between the *Application Interface* and the *Infrastructure Interfaces* boxes is only present when no SW block implements the *Application Services* box.
 
 ## Composition Chain
 
+The schema described in the previous section only deals with loosely coupled SW block sets implementing the application features, but, in order to complete the actual SW, the composition root code should be added.
+
+For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is splitted into several blocks (the ones holding the "U" and "I" letters), chained together in a nested reference tree called *Composition Chain*.
+
 ![Cross Architecture - Composition Chain](Alessandro Meo Cross Architecture - Composition Chain.png)
 
+As shown above, the *Composition Chain* is rooted in the *Application Host*, whose responsibility is to build the SW layer stack and provide any configuration or action required for the application startup. The *Application Host* is the actual SW application entry point, built as a ready-to-run executable or potentially hosted inside an application server (e.g.: an HTTP server).
+
 ## Testing
+
+Leveraging the *Composition Chain*, it is possible to implement automated tests easily targeting any layer or level of the SW architecture.
+
+Some examples about are shown in the following sub-sections.
 
 ### Unit Testing
 
@@ -40,6 +50,14 @@ Some blocks and dependencies are optional.
 ![Cross Architecture - Functional Testing](Alessandro Meo Cross Architecture - Functional Testing.png)
 
 ## Architecture Reduction
+
+The most important aim of the **Cross Architecture** is to flexibly adapt to the actual applications needs. This is done by the so called *Architecture Reduction*, which mainly implies:
+1. dividing a logical area (box) into multiple SW blocks rather than implementing it in a single SW block;
+2. making the internal design of the SW blocks more or less complex;
+3. skipping the implementation of unrequired logical areas;
+4. duplicating the whole architecture when deep separation between sub-contexts is required.
+
+The next sub-sections present some examples of *Architecture Reduction* for the most common cases.
 
 ### DDD
 
@@ -57,7 +75,7 @@ Some blocks and dependencies are optional.
 
 ![Cross Architecture - Implementing Simple In-Memory](Alessandro Meo Cross Architecture - Implementing Simple In-Memory.png)
 
-### SW Built over an HW Device
+### SW Built Around a HW Device
 
 ![Cross Architecture - Implementing HW Device Based SW](Alessandro Meo Cross Architecture - Implementing HW Device Based SW.png)
 
