@@ -55,7 +55,7 @@ The most important aim of the **Cross Architecture** is to flexibly adapt to the
 1. dividing a logical area (box) into multiple SW blocks rather than implementing it as a single SW block;
 2. making the internal design of the SW blocks more or less complex;
 3. skipping the implementation of unrequired logical areas;
-4. duplicating the whole architecture when deep separation between sub-contexts is required.
+4. duplicating the whole architecture schema when deep separation between sub-contexts is required.
 
 The next sub-sections present some examples of *Architecture Reduction* for some of the most common scenarios.
 
@@ -102,3 +102,7 @@ Reconsidering that architecture in order to fit into the **Cross Architecture** 
 ### Micro-Services
 
 ![Cross Architecture - Implementing Micro-Services](Alessandro Meo Cross Architecture - Implementing Micro-Services.png)
+
+As already stated, the *Architecture Reduction* includes the possibility to duplicate the whole architecture schema when deep separation between sub-contexts is required; this type of reduction is particularly suited for the micro-services scenario, as shown above.
+
+In particular, the **Cross Architecture** helps in differentiating the internal design of the micro-services starting from their actual needs, while keeping their architectures tied to the same general schema and rules.
