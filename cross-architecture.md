@@ -13,7 +13,7 @@ The **Cross Architecture** can be represented by the following cross-shaped sche
 
 ![Cross Architecture - Schema](Alessandro Meo Cross Architecture - Schema.png)
 
-In the schema, each box represents a logical area that may be implemented by one or more SW blocks (either unrelated or organized in loosely coupled layers) or even by no SW block in case the box is marked as optional (gray background).
+Each box in the schema represents a logical area that may be implemented by one or more SW blocks (either unrelated or organized in loosely coupled layers) or even by no SW block in case the box is marked as optional (gray background).
 
 The compile time dependencies between the SW blocks are explicitly expressed, together with their intended use, by means of arrows among the holding boxes:
 * a *“uses” dependency* means that the dependent block uses the pointed one, moreover, in case the pointed block is and interface block, one of its implementations is required to be injected into the dependent block (more precisely, this is about the contained classes);
