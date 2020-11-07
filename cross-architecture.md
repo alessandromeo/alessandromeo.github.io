@@ -3,9 +3,9 @@ _**Alessandro Meo** - Nov. 7, 2020_
 
 The **Cross Architecture** is a SW architecure approach inspired by the combination of some well known architecures and design techniques, like the *multi-layer architecture*, the *Onion Architecture*, the *Clean Architecture* and the *DDD*.
 
-The main idea that led me to the definition of the **Cross Architecture** was to describe a flexible way for designing the architecture of a SW over the actual needs of the application, while respecting a set of basic constraints providing good decoupling, testability and logical organization of the code. Also, the same set of rules, should provide a guidance for extending the architecture in order to follow potential evolutions of the application.
+The main idea that led me to the definition of the **Cross Architecture** was to describe a flexible way for designing the architecture of a SW over the actual application needs, while respecting a set of basic constraints providing good decoupling, testability and logical organization of code. Also, the same set of rules should provide a guidance for extending the architecture in order to follow potential application evolutions.
 
-In practice, the above set of rules should be able span and serve to rather different situations, hence the name **Cross Architecture**.
+In practice, the above set of rules should be able to span and serve to rather different situations, hence the name **Cross Architecture**.
 
 ## General Concepts
 
