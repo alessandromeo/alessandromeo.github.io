@@ -73,6 +73,10 @@ On the other hand, with respect to the *Onion/Clean Architectures*, the **Cross 
 
 ![Cross Architecture - Implementing Multi Layer](Alessandro Meo Cross Architecture - Implementing Multi Layer.png)
 
+The "classical" multi-layer architecture, composed of the UI, BLL and DAL layers, can be easily implemented in **Cross Architecture** by mapping those layers to the *Application Interface*, *Application Services* and *Infrastructure* boxes.
+
+With respect to the "classical" multi-layer approach, the **Cross Architecture** adds loose decoupling between layers and a mandatory *Core Model*, gathering common elements, referenced by all the other layers, but also implementing the core of the application data model. The *Core Model* cannot be a bare collector of shared elements, but it should be considered as one of the main elements of the architecture when organizing concerns and distributing responsibilities.
+
 ### Simple CRUD
 
 ![Cross Architecture - Implementing Simple CRUD](Alessandro Meo Cross Architecture - Implementing Simple CRUD.png)
