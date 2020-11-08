@@ -106,4 +106,4 @@ Reconsidering that architecture in order to fit into the **Cross Architecture** 
 
 As already stated, the *Architecture Reduction* includes the possibility to duplicate the whole architecture schema when deep separation between sub-contexts is required; this type of reduction is particularly suited for the micro-services scenario, as shown above.
 
-In particular, the **Cross Architecture** helps in differentiating the internal design of the micro-services starting from their actual needs, while keeping their architectures tied to the same general schema and rules.
+Also, the **Cross Architecture** helps in differentiating the internal design of the micro-services starting from their actual needs, while keeping their architectures tied to the same general schema and rules.
