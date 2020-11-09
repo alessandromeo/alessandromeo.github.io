@@ -1,3 +1,5 @@
 # alessandromeo.github.io
 
-This is the git repository providing contents to the [alessandromeo.github.io](https://alessandromeo.github.io) web site.
+Thinking and thoughts about **software architecture**, **coding** and **development**.
+
+Open the website contents at [alessandromeo.github.io](https://alessandromeo.github.io).
