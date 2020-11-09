@@ -41,11 +41,15 @@ Some examples about are shown in the following sub-sections.
 
 ![Cross Architecture - Unit Testing](Alessandro Meo Cross Architecture - Unit Testing.png)
 
-The **Cross Architecture** provides several isolated testable units; each of them can be referenced by means of a single *U Composition Ring* of the composition chain (like the *Core Services* and the *Application Services*) or even directly (like the *Core Model* and the *Application Interface*).
+The **Cross Architecture** provides several isolated testable units; each of them can be referenced by means of a single *U Composition Ring* (like the *Core Services* and the *Application Services*) or even directly (like the *Core Model* and the *Application Interface*).
+
+By the above mentioned references, each part of the SW (not interacting with external systems) may be tested in isolation; anyway, writing tests for a particluar SW block firstly requires considering if it may be worth doing.
 
 ### Integration Testing
 
 ![Cross Architecture - Integration Testing](Alessandro Meo Cross Architecture - Integration Testing.png)
+
+Referencing a group of SW blocks for integration testing is much like doing that for test units; that's the case of the *Application Services* integration testing, along with the SW blocks used by them, or the *Infrastructure* integration tests (where external systems get involved); in both cases only a single *I Composition Ring* is required to be referenced.
 
 ### Functional Testing
 
