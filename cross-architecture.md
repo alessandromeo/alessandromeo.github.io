@@ -25,21 +25,21 @@ The dependency between the *Application Interface* and the *Infrastructure Inter
 
 The *Logical Areas* provided by the **Cross Architecture** are the following ones:
 
-* **Core Model**: core entities and business logic strictly tied to them; depending on the situation, it may contain a DDD domain model, a set of plain old objects representing the model or anything in between; in any case, the *Core Model* should always be present and contain a model of the business being implemented.
+* **Core Model**: core entities and business logic strictly tied to them. Depending on the situation, it may contain a DDD domain model, a set of plain old objects representing the model or anything in between; in any case, the *Core Model* should always be present and contain a model of the business being implemented.
 
 * **Core Service Interfaces**: interfaces for the *Core Services* logical area.
 
-* **Core Services**: additional business logic built over the *Core Model*; this is an optional *Logical Area*, typically involved in complex situations when a separation of the business logic into different layers is required; the business logic implemented in the *Core Services* are typically related to more than one core entity and cannot interact with external systems (no injection of the *Infrastructure* into the *Core Services* should be present); also, no *Core Services* may be present without some *Application Services*.
+* **Core Services**: additional business logic built over the *Core Model*. This is an optional *Logical Area*, typically involved in complex situations when a separation of the business logic into different layers is required; the business logic implemented in the *Core Services* are typically related to more than one core entity and cannot interact with external systems (no injection of the *Infrastructure* into the *Core Services* should be present). No *Core Services* can be present without some *Application Services*.
 
 * **Application Service Interfaces**: interfaces for the *Application Services* logical area.
 
-* **Application Services**: additional business logic built over the *Core Model*, the *Core Services* and the *Infrastructure*; this is an optional *Logical Area*, typically involved in situations with medium-to-high complexity; the *Application Services* contain business logic typically related to the orchestration of core entities, *Business Services* (if present) and *Infrastructure*, but, depending on the situation, they may also integrate business logic more strictly tied to sets of core entities (when no *Business Services* are present) or even to single core entities (in case of dry *Core Model*); when present, the *Application Services* are the only entry point the *Application Interface* can use for employing the features of the *Core Services* and the *Infrastructure*.
+* **Application Services**: additional business logic built over the *Core Model*, the *Core Services* and the *Infrastructure*. This is an optional *Logical Area*, typically involved in situations with medium-to-high complexity; the *Application Services* contain business logic typically related to the orchestration of core entities, *Business Services* (if present) and *Infrastructure* (if present), but, depending on the situation, they may also integrate business logic more strictly tied to sets of core entities (when no *Business Services* are present) or even to single core entities (in case of dry *Core Model*). When present, the *Application Services* are the only entry point the *Application Interface* can use for employing the *Core Services* or *Infrastructure* features.
 
 * **Infrastructure Interfaces**: interfaces for the *Infrastructure* logical area.
 
-* **Infrastructure**: interaction with external systems; this is an optional *Logical Area* typically implementing interaction with databases, mail servers, file storages and service based external applications.
+* **Infrastructure**: interaction with external systems. This is an optional *Logical Area* typically implementing interaction with databases, mail servers, file storages and service based external applications.
 
-* **Application Interface**: user or machine operable interface to the application; this is a mandatory *Logical Area* providing the operable entry point to the application for users or client systems; this is not necessarily dedicated to human users, but, for example, may be implemented as a web API or service application; moreover, the client system may be another application exposing features to human users, like an SPA.
+* **Application Interface**: user or machine operable interface to the application. This is a mandatory *Logical Area* providing the operable entry point to the application for users or client systems; this is not necessarily dedicated to human users, but, for example, may also be implemented as a web API or service application.
 
 ## Composition Chain
 
