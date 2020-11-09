@@ -55,7 +55,7 @@ Referencing a group of SW blocks for integration testing is much like doing that
 
 ![Cross Architecture - Functional Testing](Alessandro Meo Cross Architecture - Functional Testing.png)
 
-Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only need to reference one *"I" Composition Ring*.
+Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only needs to reference one *"I" Composition Ring*.
 
 ## Architecture Reduction
 
