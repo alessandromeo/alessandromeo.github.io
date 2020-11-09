@@ -25,7 +25,7 @@ The dependency between the *Application Interface* and the *Infrastructure Inter
 
 The schema described in the previous section only deals with loosely coupled SW block sets implementing the application features, but, in order to complete the actual SW, the composition root code should be added.
 
-For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks (the ones holding the "U" and "I" letters), chained together in a nested reference tree called *Composition Chain*.
+For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks called *U Composition Rings* and *I Composition Rings* (the ones holding the "U" and "I" letters in the schema); the *Composition Rings* get then chained together in a nested reference tree called *Composition Chain*.
 
 ![Cross Architecture - Composition Chain](Alessandro Meo Cross Architecture - Composition Chain.png)
 
@@ -40,6 +40,8 @@ Some examples about are shown in the following sub-sections.
 ### Unit Testing
 
 ![Cross Architecture - Unit Testing](Alessandro Meo Cross Architecture - Unit Testing.png)
+
+The **Cross Architecture** provides several isolated testable units; each of them can be referenced by means of a single *U Composition Ring* of the composition chain (like the *Core Services* and the *Application Services*) or even directly (like the *Core Model* and the *Application Interface*).
 
 ### Integration Testing
 
