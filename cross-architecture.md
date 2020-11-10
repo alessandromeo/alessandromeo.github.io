@@ -1,5 +1,5 @@
 # Cross Architecture
-_**Alessandro Meo** - Nov. 9, 2020_
+_**Alessandro Meo** - Nov. 10, 2020_
 
 The **Cross Architecture** is a SW architecture approach inspired by the combination of some well-known design techniques, like the *multi-layer architecture*, the *Onion Architecture*, the *Clean Architecture* and the *DDD*.
 
