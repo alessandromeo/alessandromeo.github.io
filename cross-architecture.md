@@ -16,8 +16,8 @@ The **Cross Architecture** can be represented by the following cross-shaped sche
 Each box in the schema represents a *Logical Area* that may be implemented by one or more SW blocks (either unrelated or organized in loosely coupled layers) or even by no SW block in case the *Logical Area* is marked as optional (gray background).
 
 The compile time dependencies between the SW blocks are explicitly expressed, together with their intended use, by means of arrows among the holding boxes:
-* a *“uses” dependency* means that the dependent block uses the pointed one, moreover, in case the pointed block is an interface block, one of its implementations is required to be injected into the dependent block (more precisely, this is about the contained classes);
-* an *“implements” dependency* means that the dependent block implements the pointed one (more precisely, this is about the contained classes).
+* a *“uses” dependency* means that the dependent block uses the pointed one, moreover, in case the pointed block is an interface block (i.e.: a block abstraction), one of its implementations is required to be injected into the dependent block; more precisely, this is about the contained classes. (Note that in *Application Interface* the term "interface" does not make reference to a block abstraction);
+* an *“implements” dependency* means that the dependent block implements the pointed one; more precisely, this is about the contained classes.
 
 The dependency between the *Application Interface* and the *Infrastructure Interfaces* logical areas is only present when no SW block implements the *Application Services* logical area.
 
@@ -75,7 +75,7 @@ Referencing a group of SW blocks for integration testing is much like doing that
 
 ![Cross Architecture - Functional Testing](Alessandro Meo Cross Architecture - Functional Testing.png)
 
-Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only needs to reference one *"I" Composition Ring*.
+Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only needs to reference the outermost *"I" Composition Ring* and the *Application Interface*.
 
 ## Architecture Reduction
 
@@ -132,6 +132,6 @@ Reconsidering that architecture in order to fit into the **Cross Architecture** 
 
 ![Cross Architecture - Implementing Micro-Services](Alessandro Meo Cross Architecture - Implementing Micro-Services.png)
 
-As already stated, the *Architecture Reduction* includes the possibility to duplicate the whole architecture schema when deep separation between sub-contexts is required; this type of reduction is particularly suited for the micro-services scenario, as shown above.
+As already stated, the *Architecture Reduction* includes the possibility to duplicate the whole architecture schema when deep separation between sub-contexts is required; this type of reduction is particularly suited for the micro-services scenario, as shown above (remarks: the displayed communication channel is only one of the possible interaction scenarios between micro-services; a complete description about is beyond the scope of this article).
 
 In this case, the **Cross Architecture** helps in differentiating the internal design of the micro-services starting from their actual needs, while keeping their architectures tied to the same general schema and rules.
