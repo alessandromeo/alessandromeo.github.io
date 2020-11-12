@@ -24,6 +24,8 @@ The compile time dependencies between the SW blocks are explicitly expressed, to
 * a *“uses” dependency* means that the dependent block uses the pointed one, moreover, in case the pointed block is an interface block (i.e.: a block abstraction), one of its implementations is required to be injected into the dependent block; more precisely, this is about the contained classes. (Note that in *Application Interface* the term "interface" does not make reference to a block abstraction);
 * an *“implements” dependency* means that the dependent block implements the pointed one; more precisely, this is about the contained classes.
 
+All the interface blocks (block abstractions) depend on the *Core Model*, but, for sake of simplicity, these dependencies have not been represented in the schemas of this article.
+
 The dependency between the *Application Interface* and the *Infrastructure Interfaces* logical areas is only present when no SW block implements the *Application Services* logical area.
 
 ## Logical Areas
