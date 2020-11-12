@@ -52,9 +52,9 @@ The *Logical Areas* described in the previous section only deals with loosely co
 
 For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks called *"U" Composition Rings* and *"I" Composition Rings* (the ones holding the "U" and "I" letters in the schema); the *Composition Rings* get then chained together in a nested reference tree called *Composition Chain*.
 
-The difference between *"U" Composition Rings* and *"I" Composition Rings* is that the former contain the composition code providing isolated SW units, while the latter contain the composition code providing integration of SW blocks with other SW blocks or external systems.
-
 ![Cross Architecture - Composition Chain](Alessandro Meo Cross Architecture - Composition Chain.png)
+
+The difference between *"U" Composition Rings* and *"I" Composition Rings* is that the former contain the composition code providing isolated SW units, while the latter contain the composition code providing integration of SW blocks with other SW blocks or external systems.
 
 As shown above, the *Composition Chain* is rooted in the *Application Host*, whose responsibility is to build the SW layer stack and provide any configuration or action required for the application startup. The *Application Host* is the actual SW application entry point, built as a ready-to-run executable or potentially hosted inside an application server (e.g.: an HTTP server).
 
