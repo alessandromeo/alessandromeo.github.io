@@ -50,11 +50,11 @@ The *Logical Areas* provided by the **Cross Architecture** are the following one
 
 The *Logical Areas* described in the previous section only deals with loosely coupled SW block sets implementing the application features, but, in order to complete the actual SW, the composition root code should be added.
 
-For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks called *"U" Composition Rings* and *"I" Composition Rings* (the ones holding the "U" and "I" letters in the schema); the *Composition Rings* get then chained together in a nested reference tree called *Composition Chain*.
+For keeping a high level of flexibility, in the **Cross Architecture** the composition root code is split into several blocks called *Unit Composition Rings* and *Integration Composition Rings* (the ones holding the "U" and "I" letters in the schema); the *Composition Rings* get then chained together in a nested reference tree called *Composition Chain*.
 
 ![Cross Architecture - Composition Chain](Alessandro Meo Cross Architecture - Composition Chain.png)
 
-The difference between *"U" Composition Rings* and *"I" Composition Rings* is that the former contain the composition code providing isolated SW units, while the latter contain the composition code providing integration of SW blocks with other SW blocks or external systems.
+The difference between *Unit Composition Rings* and *Integration Composition Rings* is that the former contain the composition code providing isolated SW units, while the latter contain the composition code providing integration of SW blocks with other SW blocks or external systems.
 
 As shown above, the *Composition Chain* is rooted in the *Application Host*, whose responsibility is to build the SW layer stack and provide any configuration or action required for the application startup. The *Application Host* is the actual SW application entry point, built as a ready-to-run executable or potentially hosted inside an application server (e.g.: an HTTP server).
 
@@ -68,7 +68,7 @@ Some examples about are shown in the following sub-sections.
 
 ![Cross Architecture - Unit Testing](Alessandro Meo Cross Architecture - Unit Testing.png)
 
-The **Cross Architecture** provides several isolated testable units; each of them can be referenced by means of a single *"U" Composition Ring* (like the *Core Services* and the *Application Services*) or even directly (like the *Core Model* and the *Application Interface*).
+The **Cross Architecture** provides several isolated testable units; each of them can be referenced by means of a single *Unit Composition Ring* (like the *Core Services* and the *Application Services*) or even directly (like the *Core Model* and the *Application Interface*).
 
 By the above mentioned references, each part of the SW (not interacting with external systems) may be tested in isolation; anyway, writing tests for a particular SW block firstly requires considering if it may be worth doing.
 
@@ -76,13 +76,13 @@ By the above mentioned references, each part of the SW (not interacting with ext
 
 ![Cross Architecture - Integration Testing](Alessandro Meo Cross Architecture - Integration Testing.png)
 
-Referencing a group of SW blocks for integration testing is much like doing that for test units; that's the case of the *Application Services* integration testing, along with the SW blocks used by them, or the *Infrastructure* integration tests (where external systems get involved); in both cases only a single *"I" Composition Ring* is required to be referenced.
+Referencing a group of SW blocks for integration testing is much like doing that for test units; that's the case of the *Application Services* integration testing, along with the SW blocks used by them, or the *Infrastructure* integration tests (where external systems get involved); in both cases only a single *Integration Composition Ring* is required to be referenced.
 
 ### Functional Testing
 
 ![Cross Architecture - Functional Testing](Alessandro Meo Cross Architecture - Functional Testing.png)
 
-Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only needs to reference the outermost *"I" Composition Ring* and the *Application Interface*.
+Despite being logically different, functional tests can be structurally implemented as an overall type of integration tests; which means that the *Functional Test Host* only needs to reference the topmost *Integration Composition Ring* and the *Application Interface*.
 
 ## Architecture Reduction
 
