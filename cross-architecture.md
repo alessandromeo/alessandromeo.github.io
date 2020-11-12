@@ -7,6 +7,11 @@ The main idea that led me to the definition of the **Cross Architecture** was to
 
 In practice, the above set of rules should be able to span and serve to rather different situations, hence the name **Cross Architecture**.
 
+## Example Solutions
+
+For supporting the **Cross Architecture** approach, some example solutions have been made available for download:
+* [Cross Architecture Example Solution (Empty)](https://github.com/alessandromeo/CrossArchitectureEmpty)
+
 ## General Concepts
 
 The **Cross Architecture** can be represented by the following cross-shaped schema.
