@@ -103,7 +103,7 @@ The next sub-sections present some examples of *Architecture Reduction* for some
 Implementing a DDD approach with the **Cross Architecture** leads to a design much similar to the one produced by the *Onion Architecture*, as highlighted by the *Application Core* logical area, which recalls one of its typical concepts.
 
 On the other hand, with respect to the *Onion Architecture*, the **Cross Architecture** adds:
-* constraints about the references between SW blocks; e.g.: the *Application Interface* can only interact with the *Application Services* and the *Core Model*, while the *Core Services* get "hidden" by the *Application Services*; this is a different from the *Onion Architecture* where all the "inner" blocks can be referenced by the "outer" blocks;
+* constraints about the references between SW blocks; e.g.: the *Application Interface* can only interact with the *Application Services* and the *Core Model*, while the *Core Services* get "hidden" by the *Application Services*; this is different from the *Onion Architecture* where all the "inner" blocks can be referenced by the "outer" blocks;
 * information about the injection points; e.g.: the *Infrastructure* get injected into the *Application Services*, but not into the *Core Services*; this enforces a pure "DDD style", where the domain services are not allowed to interact with external systems;
 * isolation of the interfaces into dedicated SW blocks, enabling two way decoupling between the interface referencer and the interface implementer.
 
