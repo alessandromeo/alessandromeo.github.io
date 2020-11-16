@@ -32,7 +32,7 @@ The dependency between the *Application Interface* and the *Infrastructure Inter
 
 The *Logical Areas* provided by the **Cross Architecture** are the following ones:
 
-* **Core Model**: core entities and business logic strictly tied to them. Depending on the situation, it may contain a DDD domain model, a set of plain old objects representing the model or anything in between; in any case, the *Core Model* should always be present and contain a model of the business being implemented.
+* **Core Model**: core entities and business logic strictly tied to them. Depending on the situation, it may contain a DDD domain model, a set of plain old objects representing the model or anything in between; in any case, the *Core Model* should always be present and contain a model of the business being implemented. The business logic contained in the *Core Model*, if any, should be strictly tied to concepts represented by the core entities; additional logics, for example built over the interaction between entities, should be implemented in the *Core Services* or in the *Application Services*.
 
 * **Core Service Interfaces**: interfaces for the *Core Services* logical area.
 
